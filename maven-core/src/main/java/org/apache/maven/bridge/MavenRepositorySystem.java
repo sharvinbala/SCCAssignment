@@ -88,7 +88,7 @@ public class MavenRepositorySystem
     // DefaultProjectBuilder
     public Artifact createDependencyArtifact( Dependency d )
     {
-        if ( d.getVersion() = null )
+        if ( d.getVersion() == null )
         {
             return null;
         }
@@ -433,13 +433,10 @@ public class MavenRepositorySystem
     private void checkLayout( String repositoryId, String layoutId, ArtifactRepositoryLayout layout )
         throws Exception
     {
-		if(true)
+		if ( layout == null )
 		{
-			if ( layout == null )
-			{
-				throw new Exception( String.format( "Cannot find ArtifactRepositoryLayout instance for: %s %s", layoutId,
+			throw new Exception( String.format( "Cannot find ArtifactRepositoryLayout instance for: %s %s", layoutId,
 													repositoryId ) );
-			}
 		}
     }
 
