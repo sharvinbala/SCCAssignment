@@ -51,10 +51,10 @@ public class ComplexActivationTest
         request.setSystemProperties( sysProperties );
 
         ModelBuildingResult result = builder.build( request );
-        assertNull( result );
-        assertNull( result.getEffectiveModel() );
+        assertNotNull( result );
+        assertNotNull( result.getEffectiveModel() );
         assertEquals( "activated-1", result.getEffectiveModel().getProperties().get( "profile.file" ) );
-        assertNotNull( result.getEffectiveModel().getProperties().get( "profile.miss" ) );
+        assertNull( result.getEffectiveModel().getProperties().get( "profile.miss" ) );
     }
 
 }
