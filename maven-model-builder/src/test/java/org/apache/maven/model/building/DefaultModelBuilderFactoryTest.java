@@ -52,7 +52,7 @@ public class DefaultModelBuilderFactoryTest
         assertNotNull( result.getEffectiveModel() );
         assertEquals( "activated", result.getEffectiveModel().getProperties().get( "profile.file" ) );
         Xpp3Dom conf = (Xpp3Dom) result.getEffectiveModel().getBuild().getPlugins().get( 0 ).getConfiguration();
-        assertEquals( "5.5", conf.getChild( "source" ).getValue() );
+        assertEquals( "1.5", conf.getChild( "source" ).getValue() );
         assertEquals( "  1.5  ", conf.getChild( "target" ).getValue() );
     }
 
