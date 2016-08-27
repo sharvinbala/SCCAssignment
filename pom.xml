@@ -723,6 +723,15 @@ under the License.
 			  <threshold>Low</threshold>
               <xmlOutput>true</xmlOutput>
            </configuration>
+		   <executions>
+                <execution>
+                    <id>analyze-compile</id>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                </execution>
+            </executions>
 		  </plugin>
 		  <plugin>
            <groupId>org.apache.maven.plugins</groupId>
