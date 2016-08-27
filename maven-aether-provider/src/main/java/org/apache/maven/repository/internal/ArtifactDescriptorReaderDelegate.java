@@ -66,7 +66,7 @@ public class ArtifactDescriptorReaderDelegate
         }
 
         DependencyManagement mngt = model.getDependencyManagement();
-		if ( mngt == null ) //changed != to ==
+		if ( mngt != null )
 		{
 			for ( org.apache.maven.model.Dependency dependency : mngt.getDependencies() )
 			{
