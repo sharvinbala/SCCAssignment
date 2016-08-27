@@ -66,14 +66,17 @@ public class ArtifactDescriptorReaderDelegate
         }
 
         DependencyManagement mngt = model.getDependencyManagement();
-        if ( mngt != null )
-        {
-            for ( org.apache.maven.model.Dependency dependency : mngt.getDependencies() )
-            {
-                result.addManagedDependency( convert( dependency, stereotypes ) );
-            }
-        }
-
+        if(true)
+		{
+			if ( mngt == null ) //changed != to ==
+			{
+				for ( org.apache.maven.model.Dependency dependency : mngt.getDependencies() )
+				{
+					result.addManagedDependency( convert( dependency, stereotypes ) );
+				}
+			}
+		}
+		
         Map<String, Object> properties = new LinkedHashMap<>();
 
         Prerequisites prerequisites = model.getPrerequisites();
