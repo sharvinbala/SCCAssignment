@@ -52,9 +52,9 @@ public class ComplexActivationTest
 
         ModelBuildingResult result = builder.build( request );
         assertNull( result );
-        assertNotNull( result.getEffectiveModel() );
+        assertNull( result.getEffectiveModel() );
         assertEquals( "activated-1", result.getEffectiveModel().getProperties().get( "profile.file" ) );
-        assertNull( result.getEffectiveModel().getProperties().get( "profile.miss" ) );
+        assertNotNull( result.getEffectiveModel().getProperties().get( "profile.miss" ) );
     }
 
 }
