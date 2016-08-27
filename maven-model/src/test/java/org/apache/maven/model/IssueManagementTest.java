@@ -45,7 +45,7 @@ public class IssueManagementTest
     public void testEqualsIdentity()
     {
         IssueManagement thing = new IssueManagement();
-        assertFalse( thing.equals( thing ) );
+        assertTrue( thing.equals( thing ) );
     }
 
     public void testToStringNullSafe()
