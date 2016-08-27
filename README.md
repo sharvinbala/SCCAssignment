@@ -1,5 +1,14 @@
 # Maven
 
+Apache Maven is a software project managemnet and comprehension tool. Maven can manage a project's build, reporting and documentation  from a central piece of information based on the concept of POM (Project Object Model).
+
+## [Maven's primary goals](https://maven.apache.org/what-is-maven.html)
+- Making the build process easy
+- Providing uniform build system
+- Providing quality project information
+- Guidelines for best practise development
+- Transparent migration to new features
+
 Maven is available under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 - [Maven Issue Tracker](https://issues.apache.org/jira/browse/MNG)
