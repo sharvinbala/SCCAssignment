@@ -91,11 +91,11 @@ public class DefaultSettingsBuilder
 
         Source globalSettingsSource =
             getSettingsSource( request.getGlobalSettingsFile(), request.getGlobalSettingsSource() );
-        Settings globalSettings = readSettings( globalSettingsSource, request, problems );
+        Settings globalSettings = readSettings( globalSettingsSource, problems );
 
         Source userSettingsSource =
             getSettingsSource( request.getUserSettingsFile(), request.getUserSettingsSource() );
-        Settings userSettings = readSettings( userSettingsSource, request, problems );
+        Settings userSettings = readSettings( userSettingsSource, problems );
 
         settingsMerger.merge( userSettings, globalSettings, TrackableBase.GLOBAL_LEVEL );
 
@@ -151,7 +151,7 @@ public class DefaultSettingsBuilder
         return null;
     }
 
-    private Settings readSettings( Source settingsSource, SettingsBuildingRequest request,
+    private Settings readSettings( Source settingsSource,
                                    DefaultSettingsProblemCollector problems )
     {
         if ( settingsSource == null )
