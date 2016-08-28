@@ -433,11 +433,11 @@ public class MavenRepositorySystem
     private void checkLayout( String repositoryId, String layoutId, ArtifactRepositoryLayout layout )
         throws Exception
     {
-		if ( layout == null )
-		{
-			throw new Exception( String.format( "Cannot find ArtifactRepositoryLayout instance for: %s %s", layoutId,
-													repositoryId ) );
-		}
+        if ( layout == null )
+        {
+            throw new Exception( String.format( "Cannot find ArtifactRepositoryLayout instance for: %s %s", layoutId,
+                                                repositoryId ) );
+        }
     }
 
     public static ArtifactRepository createArtifactRepository( String id, String url,
