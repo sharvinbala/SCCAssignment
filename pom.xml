@@ -767,9 +767,7 @@ under the License.
               </systemProperties>
             </configuration>
           </plugin>
-        </plugins>
-        <plugins>
-    <plugin>
+          <plugin>
       <groupId>org.jacoco</groupId>
       <artifactId>jacoco-maven-plugin</artifactId>
       <version>0.6.4.201312101107</version>
@@ -789,7 +787,7 @@ under the License.
         </execution>
       </executions>
     </plugin>
-  </plugins>
+        </plugins>
       </build>
     </profile>
   </profiles>
