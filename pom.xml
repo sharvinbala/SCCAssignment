@@ -444,6 +444,20 @@ under the License.
   <build>
     <pluginManagement>
       <plugins>
+
+
+        <plugin>
+           <groupId>org.codehaus.mojo</groupId>
+           <artifactId>cobertura-maven-plugin</artifactId>
+           <version>2.7</version>
+	        <configuration>
+	            <formats>
+	                <format>html</format>
+	                <format>xml</format>
+	            </formats>
+	        </configuration>
+        </plugin>
+
         <plugin>
           <groupId>org.codehaus.plexus</groupId>
           <artifactId>plexus-component-metadata</artifactId>
@@ -679,6 +693,17 @@ under the License.
       <id>reporting</id>
       <reporting>
         <plugins>
+       <plugin>
+           <groupId>org.codehaus.mojo</groupId>
+           <artifactId>cobertura-maven-plugin</artifactId>
+           <version>2.7</version>
+           <configuration>
+               <formats>
+        	 	<format>html</format>
+                   <format>xml</format>
+               </formats>
+           </configuration>
+        </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
@@ -767,25 +792,6 @@ under the License.
               </systemProperties>
             </configuration>
           </plugin>
-        	 <plugin>
-		<groupId>org.jacoco</groupId>
-		<artifactId>jacoco-maven-plugin</artifactId>
-		<version>${jacoco.version}</version>
-		<executions>
-		<execution>
-		<goals>
-		<goal>prepare-agent</goal>
-		</goals>
-		</execution>
-		<execution>
-		<id>report</id>
-		<phase>prepare-package</phase>
-		<goals>
-		<goal>report</goal>
-		</goals>
-		</execution>
-		</executions>
-		</plugin>
         </plugins>
       </build>
     </profile>
